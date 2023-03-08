@@ -4,6 +4,8 @@ body, html {
     color: rgb(174, 209, 228);
     
 }
+
+
 /* HERO HEADER STYLE */
 .hero-image {
     background-image: url(https://www.issgovernance.com/file/2013/11/Website-Frontpage-Header-02.jpg);
@@ -73,25 +75,26 @@ ul {
          }
         
          
-         .grid-container {
-            display: grid;
-            grid-template-columns: auto;
-            justify-content: space-evenly;
-            height: 400px;
-            margin-top: auto;
-            margin-bottom: 30px;
-            margin-left: 50px;
-
+         .flex-container {
+            display: flex;
+            flex-wrap: wrap;
          }
 
-         .grid-container-2 {
-            display: grid;
-            grid-template-columns: auto auto;
-            justify-content: space-evenly;
+         .flex-item {
+            display: flex;
+            flex-basis: 45%;
             height: 400px;
-            margin-top: auto;
+            margin-top: 10px;
+            margin-left: 12px;
+         }
+
+         .flex-item:first-child {
+            flex-basis: 100%;
+            height: 500px;
+         }
+       
             
-         }
+         
 
          .about {
             color:rgb(14, 14, 68);
@@ -119,8 +122,7 @@ ul {
 /* PROJECT SECTION */
 
     .project-1-card {
-        width: 900px;
-        height: 400px;
+        
         border: 8px solid rgb(14, 14, 68);
         box-sizing: border-box;
         background-image: url("./images/Bikini_Bottom_Cinema.jpg");
@@ -138,7 +140,7 @@ ul {
     }
 
     .project-header {
-        width: 200px;
+        /* width: 200px; */
         height: 80px;
         border: 1px solid rgb(14, 14, 68);
         box-sizing: border-box;
@@ -149,8 +151,10 @@ ul {
         margin: 0;
         background-color: orange;
         color: green;
-        text-align: center;
-    }
+        text-align: left;
+        
+            }
+          
 
     .project-header h3 {
         text-decoration: underline;
@@ -158,18 +162,17 @@ ul {
     }
  
     .project-2-card {
-        width: 500px;
-        height: 300px;
+        
         border: 8px solid black;
         box-sizing: border-box; 
         background-image: url("./images/Busy_Bee.jpg");
         background-size: cover; 
         background-repeat: no-repeat;
-        margin-left: 80px;
+    
     }
 
     .project-2-header {
-        width: 300px;
+        /* width: 300px; */
         height: 100px;
         border: 1px solid black;
         box-sizing: border-box;
@@ -182,16 +185,14 @@ ul {
     }
 
     .project-3-card {
-        width: 500px;
-        height: 300px;
+        
         border: 8px solid black;
         box-sizing: border-box;
-        margin-left: 30px; 
         background-color: #a64c88;       
     }
 
     .project-3-header {
-        width: 200px;
+        /* width: 200px; */
         height: 100px;
         border: 1px solid black;
         box-sizing: border-box;
@@ -203,17 +204,14 @@ ul {
         text-align: left;
     }
     .project-4-card {
-        width: 500px;
-        height: 300px;
+        
         border: 8px solid black;
         box-sizing: border-box; 
-        margin-top: 30px; 
-        margin-left: 80px;
         background-color: #a64c88;   
     }
 
     .project-4-header {
-        width: 200px;
+        /* width: 200px; */
         height: 100px;
         border: 1px solid black;
         box-sizing: border-box;
@@ -228,7 +226,7 @@ ul {
 
 .contact {
 
-    margin-top: 300px;
+    margin-top: 50px;
     align-content: center;
     color:rgb(14, 14, 68);
     line-height: normal;
@@ -253,94 +251,41 @@ ul {
       scroll-behavior: smooth;
     }
   }
-
-/* On screens that are 992px wide or less, go from four columns to two columns */
-@media screen and (max-width: 992px) {
-    body main .about-hd .row .about  .work {
-      width: 25%;
-    }
-
-    }
-    .description{
-        font-size: medium;
-        margin-top: 10px;
-        text-align: center;
-    }
-   
+  @media screen and (max-width: 980px) {
   
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-
-    
-    header body {
-      width: 100%;
+}
+  @media screen and (max-width: 768px) {
+    .flex-item, 
+    .flex-item:first-child {
+        flex-basis: 100%;
+        height: 150px;
     }
-    .topnav {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      margin-top: auto;
-
-    }
-    .vertical-line {
-       
-        border-left: none;
-        margin-left: none;
-    }
-    .about-hd {
-        text-align: justify;
-        white-space: nowrap;
-        
-    }
-    .about p {
-        margin-left: -60%;
-        margin-top: 50px;
-        margin-bottom: 0px;
-    }
-   .work-hd  {
-        height: 200px;
-        width:450px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        text-align: left;
-        margin-top: 0px;
-   }
-   .project-1-card, .project-1-card-a {
-    height: 200px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    margin-left: -10%;
-    margin-top: -20px;
-   }
-   .project-header {
-    height: 70px;
-    font-size: small;
-   }
-   .project-2-card, .project-2-card-a {
-    height: 200px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    margin-left: -22%;
-    margin-bottom: 20px;
-   }
-   .project-2-header {
-    height: 80px;
-    width: 290px;
-    font-size: small;
-    margin-left: 60px;
-    
-   }
-      }
-
-        
-    
-
-    
-
-  
- 
- 
+.project-header {
+    height: 40%;
+    font-size: 12px;
+}
+.project1-description {
+    display: none;
+}
+.project-2-header {
+    height: 40%;
+    font-size: 12px;
+}
+.project2-description {
+    display: none;
+}
+.project-3- header {
+    height: 40%;
+    font-size: 12px;
+}
+.project3-description {
+    display: none;
+}
+.project-4-header {
+    height: 40%;
+    font-size: 12px;
+}
+.project4-description {
+    display: none;
+}
   }
